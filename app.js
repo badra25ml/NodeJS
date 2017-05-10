@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var mongodb = require("mongodb");
 var monk = require('monk');
-var db = monk('localhost:27017/nodetest2');
-// var db = mongoose.connect('localhost:27017/nodetest2');
+var db = monk('localhost:27017/node');
+// var db = mongoose.connect('localhost:27017/node');
 
 
 var index = require('./routes/index');
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Make our db accessible to our router
+// Make  db accessible to the router
 app.use(function(req,res,next){
     req.db = db;
     next();
