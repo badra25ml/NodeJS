@@ -35,7 +35,7 @@ function populateTable() {
 
     // For each item in our JSON, add a table row and cells to the content string
     $.each(data, function(){
-      console.log(data);
+      // console.log(data);
       // Stick our user data array into a userlist variable in the global object
       MYAPP = data;
       tableContent += '<tr>';
