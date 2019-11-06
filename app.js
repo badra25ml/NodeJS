@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 var mongodb = require("mongodb");
 var monk = require('monk');
+// var db = monk('mongodb://<username>:<password>@ds111922.mlab.com:11922/databaseapp')
 var db = monk('localhost:27017/node');
 // var db = mongoose.connect('localhost:27017/node');
 

@@ -20,6 +20,7 @@ $(document).ready(function() {
   $('#btnAddUser').on('click', addUser);
   //  Delete User link click
   $('#userList table tbody').on('click', 'td a.linkdeleteuser', deleteUser);
+
 });
 
 // Functions =============================================================
@@ -35,7 +36,6 @@ function populateTable() {
 
     // For each item in our JSON, add a table row and cells to the content string
     $.each(data, function(){
-      // console.log(data);
       // Stick our user data array into a userlist variable in the global object
       MYAPP = data;
       tableContent += '<tr>';
